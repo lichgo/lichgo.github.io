@@ -1,4 +1,4 @@
-baseurl: /blog
-image_baseurl: /blog/assets/images
+baseurl: /
+image_baseurl: /assets/images
 markdown: kramdown
 pygments: true
