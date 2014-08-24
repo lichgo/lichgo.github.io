@@ -1,0 +1,91 @@
+---
+layout: default
+title: Projects | Jason Lin
+---
+<style>
+.projects { list-style-type: none; padding: 0; }
+.projects > li { position: relative; min-height: 150px; margin: 25px 0 60px 0; line-height: 140%; }
+.projects .image { position: absolute; height: 150px; width: 300px; background-repeat: no-repeat; background-size: cover; border-radius: 8px; }
+.projects .description { box-sizing: border-box; padding-left: 350px; width: 100%; }
+h3 { margin-top: 0; }
+footer { margin: 100px 50px; border-top: 1px solid #efefef; font-size: 0.9em; text-align: center; line-height: 300%; color: #999; }
+</style>
+
+<h2>Web apps</h2>
+<ul class="projects">
+  <li>
+    <div class="image" style="background-image:url({{ site.image_baseurl }}/synus.png);"></div>
+    <div class="description">
+      <h3><a href="http://startupx.info/synus/"><b>Synus</b></a>, a browser-based touchable P2P video & whiteboard synchronizing website</h3>
+      <ul>
+        <li>Synus is a P2P platform purely based on web browsers, enabling users to conduct online video meeting and collaborative whiteboard sketching in real time. It is plugin-free, touchable, and cross-device.</li>
+        <li>I was a full-stack developer, using WebRTC and WebSocket to tackle the problem of synchronizing server-side and client-side data of video stream and canvas (whiteboard).</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="image" style="background-image:url({{ site.image_baseurl }}/jcompressor.jpg);"></div>
+    <div class="description">
+      <h3><a href="https://www.npmjs.org/package/jcompressor"><b>JCompressor</b></a>, an open-source project: web performance tool - JavaScript files compressor</h3>
+      <ul>
+        <li>Jcompressor is a Closure Compiler-based compressor (node package) that recursively compresses all .js files in a website directory. It￼facilitates the work of compressing all JavaScript files and helps accelerating webpage rendering.</li>
+        <li>I used Node.js to create jcompressor. It is published on NPM open-source community and has thousands of downloads.</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="image" style="background-image:url({{ site.image_baseurl }}/align.jpg);"></div>
+    <div class="description">
+      <h3><a href="http://startupx.info:50000/"><b>Align</b></a>, a crowd funding & joining platform for NPO/NGO charity programs</h3>
+      <ul>
+        <li>Align helps charity programs to create project profile, raise monetary donation, engage volunteers, and publish project progress.</li>
+        <li>I used Backbone.js to create single-page web app, and leveraged Node.js+MongoDB to develop a RESTful server application.</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="image" style="background-image:url({{ site.image_baseurl }}/spotslides.jpg);"></div>
+    <div class="description">
+      <h3><a href="http://startupx.info:50004/edit.htm"><b>SpotSlides</b></a>, an online collaborative slides making tool</h3>
+      <ul>
+        <li>SpotSlides is a platform where members in small-sized teams can collaborate in making presentation slides.</li>
+        <li>I built an http server from scratch and a page template engine by using Node.js, and encapsulated Web UI components based on raw JS.</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="image" style="background-image:url({{ site.image_baseurl }}/nearby.jpg);"></div>
+    <div class="description">
+      <h3><a href="https://lh3.googleusercontent.com/-YSHU7GWKoRU/UfiJjAU_3gI/AAAAAAAAAM0/vHdirMGltWc/s258-no/nearbyapp.jpg"><b>Nearby</b></a>, a LBS-based nearby coupon discovering app</h3>
+      <ul>
+        <li>Nearby is based on WeChat. Users can find coupons nearby when sending their location information in just one tap.</li>
+        <li>Leveraged the APIs of WeChat, Google Maps, Dazhongdianpin. Used Node.js to manage, forward, and distribute http requests.</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="image" style="background-image:url({{ site.image_baseurl }}/hkstartuplist.jpg);"></div>
+    <div class="description">
+      <h3><a href="http://hk.startupx.info"><b>Made in HK</b></a>, a collection of HK startups</h3>
+      <ul>
+        <li>Made in HK serves as a portal of the profiles of all HK startups. The information include their business, hiring websites, homepages on CrunchBase and LinkedIn.</li>
+        <li>It is based on Node.js + MongoDB + express and deployed on Heroku.</li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="image" style="background-image:url({{ site.image_baseurl }}/notes.jpg);"></div>
+    <div class="description">
+      <h3><a href="http://startupx.info/notes"><b>Notes</b></a>, an online video courses learning helper</h3>
+      <ul>
+        <li>Notes helps users jot down notes when learning video courses. The notes can be displayed dynamically on the timeline.</li>
+        <li>The app is developed by using Backbone.js and HTML5 local storage.</li>
+      </ul>
+    </div>
+  </li>
+  
+</ul>
+
+<footer>
+  Made with  ❤  by <a href="{{ site.baseurl }}">Canhong Lin</a> in Hong Kong
+</footer>

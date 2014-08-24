@@ -1,0 +1,11 @@
+---
+layout: default
+title: Posts | Jason Lin
+---
+<ul class="posts">
+{% for post in site.posts %}
+	<li>
+		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+	</li>
+{% endfor %}
+</ul>
