@@ -5,7 +5,9 @@ title: Self assignment in operator=
 In C++, it is a good practice to evaluate if the passed instance is exactly itself at the very beginning of defining a operator= method:
 
 {% highlight c++ %}
-class PriceCalculator;
+class PriceCalculator {
+    // ...
+}
 class Stock {
     // ...
     Stock& operator=(const Stock& rhs);
