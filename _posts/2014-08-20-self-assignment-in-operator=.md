@@ -24,6 +24,7 @@ There is still a flaw in the above implementation. If an exception occurs at `pc
 
 {% highlight c++ %}
 Stock& Stock::operator(const Stock& rhs) {
+    if (this == &rhs) return *this;
     PriceCalculator *pc_orig = pc;  // copy a pointer
     pc = new PriceCalculator(*rhs.pc);
     delete pc_orig;     // now it's safe to clear the data
