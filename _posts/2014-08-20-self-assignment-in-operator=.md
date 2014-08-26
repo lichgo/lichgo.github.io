@@ -7,12 +7,12 @@ In C++, it is a good practice to evaluate if the passed instance is exactly itse
 {% highlight c++ %}
 class PriceCalculator {
     // ...
-}
+};
 class Stock {
     // ...
     Stock& operator=(const Stock& rhs);
     PriceCalculator *pc;
-}
+};
 
 Stock& Stock::operator=(const Stock& rhs) {
     if (this == &rhs) return *this;     // best practice
