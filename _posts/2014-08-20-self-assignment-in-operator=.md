@@ -21,7 +21,7 @@ Stock& Stock::operator=(const Stock& rhs) {
     return *this;
 }
 {% endhighlight %}
-
+<!-- more -->
 There is still a flaw in the above implementation. If an exception occurs at `pc=new PriceCalculaotr(*rhs.pc)`, the memoryof the original `pc` has been emptied. To fix this, **never clear the data of the pointers too early**.
 
 {% highlight c++ %}
