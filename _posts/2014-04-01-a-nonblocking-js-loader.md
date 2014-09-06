@@ -5,7 +5,7 @@ title: A non-blocking js loader
 As browsers parse and render page code sequentially, the parsing and execution of Javascript (whether inline or external) code might block rendering the page and downloading other resources (e.g. images) if the js code was not properly placed. Creating dynamic script elements, due to its intrinsic asynchronous loading pattern, has been widely recognized as an efficient approach to nicely work around this problem (non-blocking). 
 
 In order to load a collection of external js files by this manner, I wrote a simple loader that takes an array of filenames, in which the js files are parsed and executed in order.
-
+<!-- more -->
 {% highlight javascript %}
 //Dynamically load js files, taking an array.
 function loadJS(fileList) {

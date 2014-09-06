@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install nodejs
 {% endhighlight %}
-
+<!-- more -->
 In fact, the problem originated from the failure to locate the imported module in a node program. Prior to this problem, I have installed the module locally in the directory of the program. Installing the module globally in **/usr/lib/node_modules** still wasn't enough to fix it. As suggested on Stack Overflow, I re-installed the module locally. It works now! 
 
 **It is an option (or might be better?) to install the required modules on both places**, although I am still confused about the reasons behind.

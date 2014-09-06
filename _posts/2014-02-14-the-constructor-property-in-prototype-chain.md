@@ -17,7 +17,7 @@ console.log(cat.constructor);  //Cat
 {% endhighlight %}
 
 However, if the function' `prototype` object is enriched, the instance's `constructor` is changed.
-
+<!-- more -->
 {% highlight javascript %}
 var Animal = {
     name: 'Animal',

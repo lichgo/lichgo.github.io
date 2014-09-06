@@ -19,7 +19,7 @@ var obj2 = {
 };
 [].slice.call(obj2, 1);  //[]
 {% endhighlight %}
-
+<!-- more -->
 The reason is obviously related to how `slice` method runs behind, and the different results of taking an usual object and an `arguments` object are attributed to the fact that `arguments` is a special array-like object with an intrinsic property: `length`.
 
 According to ECMA-262(15.4.4.10 Array.prototype.slice), the key steps of calling this method include:

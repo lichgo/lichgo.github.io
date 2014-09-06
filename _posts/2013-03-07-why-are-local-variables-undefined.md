@@ -15,7 +15,7 @@ var name = 'Jason';
 {% endhighlight %}
 
 So what is the exact reason behind? Some programmers might argue that it is because the anonymous functions do not share the same scope with the global environment outside, so the variable name defined outside is invisible to the anonymous function here. It is not true. The codes below prove my answer.
-
+<!-- more -->
 {% highlight javascript %}
 //Anonymous function 2 (AF2)
 (function() {

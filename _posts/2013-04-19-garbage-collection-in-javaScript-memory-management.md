@@ -7,7 +7,7 @@ The memory management seems a neglectable issue for JavaScript programmers since
 Consulting the article [here](https://developer.mozilla.org/en-US/docs/JavaScript/Memory_Management), I made a summary about the principles used to release the allocated memory. There are three major criteria for judging if a variable can be destroyed, indicating different number of variables whose memory should be collected.
 
 ![GC]({{ site.image_baseurl }}/gc.png)
-
+<!-- more -->
 ## Explanation
 1. **Not needed anymore** is the most generic and intuitive manner and covers the largest scope of variables that should be destroyed. However, it is undecidable.
 (2) **Unreachable***
