@@ -7,6 +7,7 @@ Here is my implementation of P&L calculation for real-time marketdata and trade 
 * The traded quantity is a signed number: positive for buy and negative for sell. That means the net position is negative if the transactioin short sells some products.
 * If the trade feed takes close action, need to be careful of whether the close quantity is larger than the net position. In this case, the average open price should also be updated to the close price.
 
+The `PnlSnapshot` class for a product:
 
 {% highlight python %}
 class PnlSnapshot:
@@ -30,12 +31,17 @@ class PnlSnapshot:
         # realized pnl
         if not is_still_open:
             # Remember to keep the sign as the net position
-            self.m_realized_pnl += ( traded_price - self.m_avg_open_price ) * min( abs(quantity_with_direction), abs(self.m_net_position) ) * ( abs(self.m_net_position) / self.m_net_position )
+            self.m_realized_pnl += ( traded_price - self.m_avg_open_price ) * 
+                min( 
+                    abs(quantity_with_direction), 
+                    abs(self.m_net_position) 
+                ) * ( abs(self.m_net_position) / self.m_net_position )
         # total pnl
         self.m_total_pnl = self.m_realized_pnl + self.m_unrealized_pnl
         # avg open price
         if is_still_open:
-            self.m_avg_open_price = ( ( self.m_avg_open_price * self.m_net_position ) + ( traded_price * quantity_with_direction ) ) / ( self.m_net_position + quantity_with_direction )
+            self.m_avg_open_price = ( ( self.m_avg_open_price * self.m_net_position ) + 
+                ( traded_price * quantity_with_direction ) ) / ( self.m_net_position + quantity_with_direction )
         else:
             # Check if it is close-and-open
             if traded_quantity > abs(self.m_net_position):
